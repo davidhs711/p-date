@@ -47,8 +47,33 @@ public class Date {
 		}
 	}
 	
-	public int getDay() {
-		return this.day;
+	public String toString() {
+		StringBuffer dateString = new StringBuffer();
+
+		dateString.append(this.day);
+		dateString.append(" / ");
+		dateString.append(this.month);
+		dateString.append(" / ");
+		dateString.append(this.year);
+		
+
+		return dateString.toString();
+	}
+	
+	public String sameNumberOfDays() {
+		StringBuffer sameNumberOfDays = new StringBuffer();
+		
+		int daysMonth= this.daysOfMonth();
+		
+		if(daysMonth==31) {
+			sameNumberOfDays.append("Enero, Marzo, Mayo, Julio, Agosto, Octubre, Diciembre");
+		} else if(daysMonth==30) {
+			sameNumberOfDays.append("Abril, Junio, Septiembre, Noviembre");
+		} else if(daysMonth==28) {
+			sameNumberOfDays.append("No hay ningun mes a parte de Febrero con 28 dias :(");
+		}
+		
+	return sameNumberOfDays.toString();
 	}
 	
 	public String season() {
@@ -106,7 +131,7 @@ public class Date {
 	return monthsLeft;
 	}
 	
-	public String nombreMes() {
+	public String monthName() {
 		
 		switch(month){
 			case 1: mes= "Enero"; break;
@@ -168,6 +193,8 @@ public class Date {
 		return diaMax;
 	}
 
+	
+	
 	public int daysOfMonth(){
 		return this.daysOfMonth(this.month);
 	}

@@ -4,8 +4,12 @@ public class Date {
 
 	private int day;
 	private int month;
-	private int year;
-	String mes;
+	private int year; 
+	
+	private int monthsLeft; 
+	private String mes;
+	private String season;
+	
 
 	public Date (int day, int month, int year) throws DateException {
 			StringBuilder error = new StringBuilder();
@@ -41,6 +45,65 @@ public class Date {
 		} else {
 			this.year= year;
 		}
+	}
+	
+	public int getDay() {
+		return this.day;
+	}
+	
+	public String season() {
+	
+		switch(month) {
+			case 1: //next
+			case 2: //next
+			case 3: 
+				if((month==3)&&(day>22)) {
+					season= "Primavera";
+					break;
+				} else {
+					season= "Invierno";
+					break;
+				}
+			case 4: //next
+			case 5: //next
+			case 6: 
+				if((month==6)&&(day>22)) {
+					season= "Verano";
+					break;
+				} else {
+					season= "Primavera";
+					break;
+				}
+			case 7: //next
+			case 8: //next
+			case 9: 
+				if((month==9)&&(day>22)) {
+					season= "Otoño";
+					break;
+				} else {
+					season= "Verano";
+					break;
+				}
+			case 10: //next 
+			case 11: //next
+			case 12: 
+				if((month==12)&&(day>22)) {
+					season= "Invierno";
+					break;
+				} else {
+					season= "Otoño";
+					break;
+				}
+		}
+	
+	return season;	
+	}
+	
+	public int monthsLeft() {
+		
+		monthsLeft= 12-month;
+		
+	return monthsLeft;
 	}
 	
 	public String nombreMes() {

@@ -76,6 +76,26 @@ public class Date {
 	return sameNumberOfDays.toString();
 	}
 	
+	public String nameOfDay(){
+		String nameOfDay= "";
+		int dayToday;
+		
+		dayToday= (countDaysFromYearStart())%7;
+		
+		switch(dayToday) {
+			case 0: nameOfDay= "Lunes"; break;
+			case 1: nameOfDay= "Martes"; break;
+			case 2: nameOfDay= "Miercoles"; break;
+			case 3: nameOfDay= "Jueves"; break;
+			case 4: nameOfDay= "Viernes"; break;
+			case 5: nameOfDay= "Sabado"; break;
+			case 6: nameOfDay= "Domingo"; break;
+		}
+		
+		
+	return nameOfDay;
+	}
+	
 	public String datesEndMonth() {
 	
 		StringBuffer datesEndMonth = new StringBuffer();

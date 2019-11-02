@@ -30,6 +30,10 @@ public class MainDate {
 			System.out.println("- A continuacion se muestra el numero de intentos que le ha tomado al");
 			System.out.println(" ordenador generar una fecha igual a la de today: (sabiendo el año)");
 			System.out.println("Intentos: "+today.randomDateEqualsToday());
+			System.out.println(""); //Linea en blanco
+			System.out.println("- Saber que dia de la semana es this.day, sabiendo que el 1 de enero fue martes");
+			System.out.println("El dia "+today.toString()+" es "+today.nameOfDay());
+			
 		
 		} catch (DateException e) {
 			System.out.println(e.getMessage());

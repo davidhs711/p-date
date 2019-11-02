@@ -211,6 +211,25 @@ public class Date {
 		return this.daysOfMonth(this.month);
 	}
 
+	public int randomDateEqualsToday(){
+		int count= 0;
+		int randomDay= 0;
+		int randomMonth= 0;
+		
+		while(randomDay!=this.day){
+			randomDay = (int) ((Math.random())*32);
+			//System.out.println(randomDay);
+			count= count+1;
+		}
+		
+		do{
+			randomMonth= (int) ((Math.random())*13);
+			count= count+1;
+		}while(randomMonth!=this.month);
+			
+	return count;
+	}
+	
 	public int countDaysFromYearStart(){
 		int count=this.day;
 		for (int i=1; i<this.month; i++){

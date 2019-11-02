@@ -24,6 +24,12 @@ public class MainDate {
 			System.out.println(""); //Linea en blanco
 			System.out.println("- Las fechas hasta que acabe el mes son:");
 			System.out.println(today.datesEndMonth());
+			System.out.println(""); //Linea en blanco
+			System.out.println("Han pasado "+today.countDaysFromYearStart()+" dias desde que empezo el año");
+			System.out.println(""); //Linea en blanco
+			System.out.println("- A continuacion se muestra el numero de intentos que le ha tomado al");
+			System.out.println(" ordenador generar una fecha igual a la de today: (sabiendo el año)");
+			System.out.println("Intentos: "+today.randomDateEqualsToday());
 		
 		} catch (DateException e) {
 			System.out.println(e.getMessage());

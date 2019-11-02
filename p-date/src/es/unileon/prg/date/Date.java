@@ -76,6 +76,18 @@ public class Date {
 	return sameNumberOfDays.toString();
 	}
 	
+	public String datesEndMonth() {
+	
+		StringBuffer datesEndMonth = new StringBuffer();
+		
+		for(int i= this.day; i<=this.daysOfMonth(); i++) {
+			
+			datesEndMonth.append(" "+i+" / "+this.month+" / "+this.year+" * ");
+		}
+		
+	return datesEndMonth.toString();
+	}
+	
 	public String season() {
 	
 		switch(month) {

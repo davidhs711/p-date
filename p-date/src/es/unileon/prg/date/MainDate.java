@@ -21,6 +21,9 @@ public class MainDate {
 			System.out.println(""); //Linea en blanco
 			System.out.println("- Los meses con los mismos dias que "+today.monthName()+" son:");
 			System.out.println(today.sameNumberOfDays());
+			System.out.println(""); //Linea en blanco
+			System.out.println("- Las fechas hasta que acabe el mes son:");
+			System.out.println(today.datesEndMonth());
 		
 		} catch (DateException e) {
 			System.out.println(e.getMessage());
